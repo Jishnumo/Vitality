@@ -1,105 +1,194 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Personal_Details() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-  });
+const Personal_Details = () => {
+  const generateCV = () => {
+    // Your generateCV function logic here
+  };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const previewImage = () => {
+    // Your previewImage function logic here
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <div
-        style={{ width: "50%", padding: "20px", borderRight: "1px solid #ccc" }}
-      >
-        <div style={{ marginBottom: "20px" }}>
-          <label htmlFor="name" style={{ marginRight: "10px" }}>
-            Name:
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-          />
+    <>
+      <nav className="navbar bg-white">
+        <div className="container">
+          <div className="navbar-content">
+            <div className="brand-and-toggler">
+              <a href="index.html" className="navbar-brand">
+                <img
+                  src="assets/images/curriculum-vitae.png"
+                  alt=""
+                  className="navbar-brand-icon"
+                />
+                <span className="navbar-brand-text">
+                  build <span>resume.</span>
+                </span>
+              </a>
+              <button type="button" className="navbar-toggler-btn">
+                <div className="bars">
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                  <div className="bar"></div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
-        <div style={{ marginBottom: "20px" }}>
-          <label htmlFor="email" style={{ marginRight: "10px" }}>
-            Email:
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-          />
-        </div>
-        <div style={{ marginBottom: "20px" }}>
-          <label htmlFor="phone" style={{ marginRight: "10px" }}>
-            Phone:
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Enter your phone number"
-          />
-        </div>
-        <div style={{ marginBottom: "20px" }}>
-          <label htmlFor="address" style={{ marginRight: "10px" }}>
-            Address:
-          </label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            placeholder="Enter your address"
-          />
-        </div>
-      </div>
-      <div style={{ width: "50%", padding: "20px" }}>
-        <h2>Preview</h2>
-        <div>
-          <p>
-            <strong>Name:</strong> {formData.name}
-          </p>
-          <p>
-            <strong>Email:</strong> {formData.email}
-          </p>
-          <p>
-            <strong>Phone:</strong> {formData.phone}
-          </p>
-          <p>
-            <strong>Address:</strong> {formData.address}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+      </nav>
 
-export default Personal_Details
+      <section id="about-sc">
+        <div className="container">
+          <div className="about-cnt">
+            <form action="" className="cv-form" id="cv-form">
+              <div className="cv-form-blk">
+                <div className="cv-form-row-title">
+                  <h3>about section</h3>
+                </div>
+                <div className="cv-form-row cv-form-row-about">
+                  <div className="cols-3">
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        First Name
+                      </label>
+                      <input
+                        name="firstname"
+                        type="text"
+                        className="form-control firstname"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. John"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Middle Name <span className="opt-text">(optional)</span>
+                      </label>
+                      <input
+                        name="middlename"
+                        type="text"
+                        className="form-control middlename"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. Herbert"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Last Name
+                      </label>
+                      <input
+                        name="lastname"
+                        type="text"
+                        className="form-control lastname"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. Doe"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                  </div>
+
+                  <div className="cols-3">
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Your Image
+                      </label>
+                      <input
+                        name="image"
+                        type="file"
+                        className="form-control image"
+                        id=""
+                        accept="image/*"
+                        onChange={previewImage}
+                      />
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Designation
+                      </label>
+                      <input
+                        name="designation"
+                        type="text"
+                        className="form-control designation"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. Sr.Accountants"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Address
+                      </label>
+                      <input
+                        name="address"
+                        type="text"
+                        className="form-control address"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. Lake Street-23"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                  </div>
+
+                  <div className="cols-3">
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Email
+                      </label>
+                      <input
+                        name="email"
+                        type="text"
+                        className="form-control email"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. johndoe@gmail.com"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Phone No:
+                      </label>
+                      <input
+                        name="phoneno"
+                        type="text"
+                        className="form-control phoneno"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. 456-768-798, 567.654.002"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                    <div className="form-elem">
+                      <label htmlFor="" className="form-label">
+                        Summary
+                      </label>
+                      <input
+                        name="summary"
+                        type="text"
+                        className="form-control summary"
+                        id=""
+                        onKeyUp={generateCV}
+                        placeholder="e.g. Doe"
+                      />
+                      <span className="form-text"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Add other form blocks for achievements, experience, education, projects, and skills */}
+            </form>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Personal_Details;
