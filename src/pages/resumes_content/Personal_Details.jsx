@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import app from "../resumes_content/app";
+import script from "../resumes_content/script";
 
 const Personal_Details = () => {
   return (
