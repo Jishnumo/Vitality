@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const PersonalDetails = () => {
-  const generateCV = () => {
-    // Your generateCV function logic here
-  };
-
-  const previewImage = () => {
-    // Your previewImage function logic here
-  };
-
+const Personal_Details = () => {
   return (
     <>
       <nav className="navbar bg-white">
@@ -522,7 +514,7 @@ const PersonalDetails = () => {
   );
 };
 
-export default PersonalDetails;
+export default Personal_Details;
 const Container = styled.div`
   #about-sc {
     padding: 64px 0;
