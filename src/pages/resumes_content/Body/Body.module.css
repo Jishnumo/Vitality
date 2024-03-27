@@ -1,3 +1,6 @@
+body {
+  background-color: #444;
+}
 .container {
   padding: 30px;
   display: flex;
@@ -8,8 +11,10 @@
 }
 
 .heading {
-  font-weight: 500;
-  font-size: 3.1rem;
+  font-weight: 600;
+  font-size: 4.31rem;
+  padding: 30px 30px;
+  color: #92a0b5;
 }
 
 .toolbar {
@@ -24,6 +29,7 @@
   display: flex;
   gap: 20px;
   padding: 0 30px;
+  margin-left: 57rem;
 }
 
 .colors .color {
